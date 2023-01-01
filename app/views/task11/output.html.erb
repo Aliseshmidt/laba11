@@ -1,2 +1,19 @@
 <h1>Task11#output</h1>
-<p>Find me in app/views/task11/output.html.erb</p>
+<p>Изначальные данные:</p>
+<p><%= @input %></p>
+<p>Результат:</p>
+<table>
+  <tr>
+    <th>№</th>
+    <th>Number</th>
+  </tr>
+ <% @result.each do |number| %>
+  <tr>
+    <td><%= number[0]["index"] %></td>         
+    <td><%= number[0].first[1] %></td>
+  </tr>
+  <% end %>
+</table>
+<p><%= @db %></p>
+<br>
+<%= link_to 'BACK TO INPUT PAGE', task11_input_path %>

@@ -1,2 +1,10 @@
 <h1>Task11#input</h1>
-<p>Find me in app/views/task11/input.html.erb</p>
+<%= form_tag("/task11/output.x", :method => "get") do %>
+<%= label_tag("Input quantity of numbers:") %>
+<%= number_field_tag(:digit, nil, min: 1) %>
+<p>Показать данные в БД: <%= check_box(:getdb,"checked") %></p>
+<%= submit_tag("Enter") %>
+<% end %>
+<%= link_to "Show XML", task11_xml_path %>
+<br/>
+
